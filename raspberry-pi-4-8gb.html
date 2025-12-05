@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La mia esperienza con Raspberry Pi 4 8GB per progetti di sviluppo, home server e automazione. Recensione onesta da developer.">
+    <title>Raspberry Pi 4 8GB: La Mia Esperienza per Progetti Dev | cringeJon</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">cringeJon</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">Chi Sono</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <h1>🔧 Raspberry Pi 4 Model B 8GB: La Mia Esperienza da Developer</h1>
+            <p><em>di Giuseppe Scappaticci (cringeJon) • Dicembre 2024 • Hardware & DIY</em></p>
+
+            <div class="product-hero">🍓</div>
+
+            <div class="affiliate-notice">
+                <strong>⚠️ Trasparenza:</strong> Questo articolo contiene link affiliati Amazon.
+                Se acquisti tramite questi link, ricevo una piccola commissione che mi aiuta a
+                mantenere il blog. In qualità di Affiliato Amazon, ricevo un guadagno dagli acquisti idonei.
+            </div>
+
+            <h2>Perché Ho Preso un Raspberry Pi 4 8GB</h2>
+            <p>
+                Come sviluppatore, sono sempre stato affascinato dai progetti IoT e dall'idea di avere un mini-server
+                domestico per sperimentare. Dopo anni di "lo devo proprio comprare", finalmente ho ceduto e preso
+                il Raspberry Pi 4 nella versione top con **8GB di RAM**.
+            </p>
+            <p>
+                La domanda che mi facevo: "8GB sono davvero necessari o bastano i 4GB?" Spoiler: dipende, ma per
+                come lo uso io, valeva assolutamente la pena.
+            </p>
+
+            <div style="background: #f0f8ff; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
+                <p style="margin-bottom: 1rem; font-size: 1.1rem;">
+                    <strong>Vuoi prendere il Raspberry Pi 4 8GB?</strong>
+                </p>
+                <a href="https://www.amazon.it/RASPBERRY-PI-RPI4-MODBP-8GB-Raspberry-Modello/dp/B09TTKT94J?th=1&linkCode=ll1&tag=cringejon07-21&linkId=bc188c5416a77f28927d86461673145b&language=it_IT&ref_=as_li_ss_tl"
+                   class="btn"
+                   target="_blank"
+                   rel="nofollow noopener"
+                   style="display: inline-block; font-size: 1.1rem; padding: 1rem 2rem;">
+                   🛒 Vedi su Amazon.it
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    Raspberry Pi 4 Model B 8GB - Link affiliato Amazon
+                </p>
+            </div>
+
+            <h2>Specifiche Tecniche</h2>
+            <ul>
+                <li><strong>SoC:</strong> Broadcom BCM2711 quad-core Cortex-A72 (ARM v8) 64-bit @ 1.5GHz</li>
+                <li><strong>RAM:</strong> 8GB LPDDR4-3200 SDRAM</li>
+                <li><strong>Connettività:</strong> 2x USB 3.0, 2x USB 2.0, Gigabit Ethernet, Wi-Fi 802.11ac, Bluetooth 5.0</li>
+                <li><strong>Video:</strong> 2x micro-HDMI (fino a 4K 60Hz)</li>
+                <li><strong>GPIO:</strong> 40-pin header standard</li>
+                <li><strong>Storage:</strong> MicroSD (io uso una da 128GB SanDisk)</li>
+                <li><strong>Alimentazione:</strong> USB-C 5V 3A (importante: serve un alimentatore adeguato!)</li>
+            </ul>
+
+            <h2>🚀 I Miei Progetti e Usi Reali</h2>
+            <p>
+                Dopo 3 mesi di utilizzo quotidiano, ecco cosa ci faccio realmente con questo Pi:
+            </p>
+
+            <h3>1. Home Server per Progetti Web</h3>
+            <p>
+                Il primo progetto è stato configurarlo come mini-server per testare applicazioni web in sviluppo.
+                Con 8GB di RAM riesco a far girare contemporaneamente:
+            </p>
+            <ul>
+                <li><strong>Docker containers:</strong> MongoDB, PostgreSQL, Redis senza problemi</li>
+                <li><strong>Node.js apps:</strong> 2-3 server Express/Fastify in parallelo</li>
+                <li><strong>Nginx:</strong> Reverse proxy per i vari servizi</li>
+                <li><strong>Portainer:</strong> Per gestire i container con UI</li>
+            </ul>
+            <p>
+                <strong>Performance:</strong> Sorprendentemente buone per development! Ovviamente non è un server
+                di produzione, ma per testare API, fare prototipi e sperimentare è perfetto. La RAM da 8GB fa la
+                differenza quando apri 10+ container Docker.
+            </p>
+
+            <h3>2. Pi-hole per Bloccare Pubblicità</h3>
+            <p>
+                Uno dei primi setup che ho fatto: **Pi-hole** come DNS server per bloccare ads e tracker su tutta
+                la rete domestica. Setup in 15 minuti, e ora qualsiasi dispositivo connesso al mio Wi-Fi (smartphone,
+                smart TV, laptop) naviga senza pubblicità.
+            </p>
+            <p>
+                <strong>Risultato:</strong> Blocca circa 30-40% delle richieste DNS. Navigazione più veloce e senza
+                banner fastidiosi. Bonus: puoi vedere quali app sui tuoi device fanno più telemetria (spoiler: le
+                app mobile sono orribili).
+            </p>
+
+            <h3>3. Media Server con Jellyfin</h3>
+            <p>
+                Con un hard disk esterno da 2TB USB 3.0, l'ho trasformato in media server personale con Jellyfin.
+                Streaming locale dei miei video, film, e serie in 1080p senza lag. La decodifica hardware del Pi 4
+                gestisce perfettamente H.264/H.265.
+            </p>
+
+            <h3>4. Progetti IoT e Automazione</h3>
+            <p>
+                Sto sperimentando con Home Assistant per controllare le smart bulbs e sensori di temperatura che ho
+                sparso per casa. Il Pi 4 gestisce tutto senza problemi, e con 8GB posso far girare anche Node-RED
+                per automazioni personalizzate.
+            </p>
+
+            <h3>5. Learning Machine Learning</h3>
+            <p>
+                Ho installato TensorFlow Lite per sperimentare con modelli ML ottimizzati per ARM. Non è potente
+                come la mia RTX 4080, ma per imparare e fare inference con modelli pre-trained funziona benissimo.
+            </p>
+
+            <h2>Pro e Contro dopo 3 Mesi di Uso</h2>
+            <div class="pros-cons">
+                <div class="pros">
+                    <h3>👍 Cosa Mi Piace Tantissimo</h3>
+                    <ul>
+                        <li><strong>8GB RAM sono un game-changer:</strong> Posso far girare stack complessi senza swap</li>
+                        <li><strong>Consumi ridicoli:</strong> 15W max, sempre acceso 24/7 senza sensi di colpa</li>
+                        <li><strong>Silenzioso:</strong> Con dissipatore passivo, zero rumore</li>
+                        <li><strong>USB 3.0:</strong> Finalmente velocità decenti per storage esterno</li>
+                        <li><strong>Gigabit Ethernet:</strong> Rete stabile per servizi always-on</li>
+                        <li><strong>Community enorme:</strong> Qualsiasi problema, trovi 10 tutorial</li>
+                        <li><strong>Versatilità assurda:</strong> Un giorno è server, il giorno dopo retro gaming console</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>👎 Cosa Potrebbe Essere Meglio</h3>
+                    <ul>
+                        <li><strong>Alimentatore venduto separato:</strong> Devi comprarlo a parte (serve 5V 3A ufficiale)</li>
+                        <li><strong>Storage su microSD limitante:</strong> Per progetti seri, serve SSD USB</li>
+                        <li><strong>Si scalda:</strong> Sotto carico intenso serve dissipatore (o fan attiva)</li>
+                        <li><strong>Non è un PC:</strong> CPU ARM limita alcuni software (ma Docker aiuta)</li>
+                        <li><strong>Prezzo:</strong> Con case + alimentatore + SD si arriva facilmente a 100€+</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>8GB vs 4GB vs 2GB: Quale Prendere?</h2>
+            <p>
+                La domanda da un milione di dollari. Ecco la mia opinione dopo averlo usato:
+            </p>
+            <ul>
+                <li><strong>2GB:</strong> Solo per progetti ultra-leggeri o retro gaming. Troppo poco per uso moderno.</li>
+                <li><strong>4GB:</strong> Sufficiente per la maggior parte degli usi (Pi-hole, media server singolo, progetti semplici)</li>
+                <li><strong>8GB:</strong> Necessario se vuoi far girare Docker con stack complessi, VM, o progetti enterprise-ish</li>
+            </ul>
+            <p>
+                <strong>Il mio consiglio:</strong> Se fai solo esperimenti base, 4GB vanno bene. Se sei un developer
+                che vuole usarlo seriamente per development/testing, prendi gli 8GB. La differenza di prezzo (20-30€)
+                vale la tranquillità di non beccare mai "out of memory".
+            </p>
+
+            <h2>Setup Consigliato</h2>
+            <p>
+                Oltre al Pi stesso, ti servono:
+            </p>
+            <ul>
+                <li><strong>Alimentatore ufficiale:</strong> Raspberry Pi USB-C 5V 3A (non lesinare su questo!)</li>
+                <li><strong>MicroSD veloce:</strong> Almeno Classe 10 A2, consiglio 64GB+ (io uso SanDisk Extreme)</li>
+                <li><strong>Case con dissipatore:</strong> Argon ONE V2 è fantastico (o almeno un dissipatore passivo)</li>
+                <li><strong>Cavo Ethernet:</strong> Anche se ha Wi-Fi, cablato è sempre meglio per server</li>
+                <li><strong>Hard disk USB 3.0:</strong> Se lo usi come NAS/media server</li>
+            </ul>
+
+            <h2>Performance e Benchmarks</h2>
+            <p>
+                Qualche numero reale dal mio utilizzo:
+            </p>
+            <ul>
+                <li><strong>Avvio sistema:</strong> ~30 secondi da spento a login SSH</li>
+                <li><strong>Docker containers:</strong> 10+ container in parallelo senza problemi</li>
+                <li><strong>Compilazione Node.js app:</strong> ~3x più lenta del mio laptop, ma accettabile</li>
+                <li><strong>Streaming 1080p:</strong> Fluido con Jellyfin, anche transcoding H.265</li>
+                <li><strong>Temperatura:</strong> 50-55°C idle, 70-75°C under load (con dissipatore)</li>
+            </ul>
+
+            <h2>🎯 Per Chi È Perfetto Questo Pi?</h2>
+            <p>
+                Consiglio il Raspberry Pi 4 8GB se:
+            </p>
+            <ul>
+                <li>Sei uno <strong>sviluppatore</strong> che vuole un ambiente di test sempre disponibile</li>
+                <li>Vuoi un <strong>home server</strong> economico e a basso consumo</li>
+                <li>Ti piacciono i <strong>progetti DIY</strong> e l'elettronica</li>
+                <li>Vuoi <strong>imparare Linux/Docker/DevOps</strong> senza rischiare il PC principale</li>
+                <li>Cerchi un <strong>media server</strong> personale o NAS leggero</li>
+                <li>Ti interessa la <strong>domotica</strong> e Home Assistant</li>
+            </ul>
+
+            <h3>NON è Per Te Se...</h3>
+            <ul>
+                <li>Cerchi un PC desktop replacement (è un SBC, non un PC)</li>
+                <li>Vuoi gaming moderno (al massimo retro gaming fino a PSX)</li>
+                <li>Ti aspetti prestazioni da server enterprise</li>
+                <li>Non vuoi imparare Linux command line</li>
+            </ul>
+
+            <div style="background: #fff3cd; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
+                <p style="margin-bottom: 1rem; font-size: 1.1rem;">
+                    <strong>Pronto a Iniziare i Tuoi Progetti?</strong>
+                </p>
+                <a href="https://www.amazon.it/RASPBERRY-PI-RPI4-MODBP-8GB-Raspberry-Modello/dp/B09TTKT94J?th=1&linkCode=ll1&tag=cringejon07-21&linkId=bc188c5416a77f28927d86461673145b&language=it_IT&ref_=as_li_ss_tl"
+                   class="btn"
+                   target="_blank"
+                   rel="nofollow noopener"
+                   style="display: inline-block; font-size: 1.1rem; padding: 1rem 2rem;">
+                   💰 Vedi Prezzo su Amazon
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    Raspberry Pi 4 Model B 8GB
+                </p>
+            </div>
+
+            <h2>Conclusione Personale</h2>
+            <p>
+                Dopo 3 mesi, il Raspberry Pi 4 8GB è diventato un pezzo fisso del mio setup. È sempre acceso nel
+                mio rack fatto in casa (spoiler: è una mensola IKEA 😅), e ci gira sopra un mix di servizi che uso
+                quotidianamente.
+            </p>
+            <p>
+                <strong>Lo ricomprerei?</strong> Assolutamente sì. Anzi, sto già pensando di prenderne un secondo
+                per fare un cluster Kubernetes (perché a quanto pare ho troppo tempo libero).
+            </p>
+            <p>
+                Il rapporto qualità/prezzo è eccezionale, e la community Raspberry Pi è probabilmente la risorsa
+                migliore: qualsiasi cosa tu voglia fare, qualcuno l'ha già fatto e documentato.
+            </p>
+
+            <div class="rating" style="font-size: 1.3rem; margin: 2rem 0;">
+                <strong>Il mio voto:</strong> ⭐⭐⭐⭐⭐ 5/5
+            </div>
+
+            <p>
+                <strong>In breve:</strong> Se sei un maker, developer, o semplicemente curioso di elettronica,
+                il Raspberry Pi 4 8GB è un must-have. Non è perfetto, ma per il prezzo e la versatilità,
+                non ha rivali.
+            </p>
+
+            <div class="affiliate-notice">
+                <strong>Nota finale:</strong> Ho comprato questo Pi con i miei soldi e lo uso davvero per i progetti
+                descritti. Le opinioni sono mie e non influenzate da nessuno. In qualità di Affiliato Amazon,
+                ricevo un guadagno dagli acquisti idonei effettuati tramite i link presenti in questa pagina.
+            </div>
+
+            <div style="background: #e8f5e9; padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center;">
+                <h3>Ti è stato utile questo articolo?</h3>
+                <p>Hai domande sul Raspberry Pi o sui miei progetti? Scrivimi o segui il blog per altri articoli!</p>
+                <p style="margin-top: 1rem;">
+                    <a href="blog.html" class="btn">← Torna al Blog</a>
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>cringeJon</h3>
+                    <p>Blog personale di Giuseppe Scappaticci - Gaming, Tech e molto altro.</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">Sviluppatore | Gamer | Tech Enthusiast</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Link Utili</h3>
+                    <ul>
+                        <li><a href="about.html">Chi Sono</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Argomenti</h3>
+                    <ul>
+                        <li><a href="blog.html">Gaming</a></li>
+                        <li><a href="blog.html">Hardware</a></li>
+                        <li><a href="blog.html">Sviluppo</a></li>
+                        <li><a href="blog.html">Fotografia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 cringeJon - Giuseppe Scappaticci. Tutti i diritti riservati.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+                    Partecipo al Programma Affiliazione Amazon EU. In qualità di Affiliato Amazon,
+                    ricevo un guadagno dagli acquisti idonei.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
